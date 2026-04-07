@@ -343,137 +343,29 @@
       color: rgba(240,230,214,0.25); text-align: center;
     }
 
-    /* Menu mockup */
-    .mockup-menu {
-      width: 150px; height: 200px;
-      background: var(--pp-cream);
-      border-radius: 4px;
-      padding: 20px 16px;
-      box-shadow: 4px 6px 24px rgba(0,0,0,0.4);
-      display: flex; flex-direction: column;
+    .mockup-photo {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(198,168,88,0.2);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.45);
+      position: relative;
+      aspect-ratio: 4 / 5;
     }
-    .menu-header {
-      text-align: center; padding-bottom: 12px;
-      border-bottom: 1px solid rgba(92,107,58,0.2);
-      margin-bottom: 12px;
+    .mockup-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 52%, rgba(0,0,0,0.22) 100%);
+      pointer-events: none;
     }
-    .menu-logo {
-      font-family: var(--font-brand); font-weight: 700;
-      font-size: 14px; color: var(--pp-espresso); letter-spacing: -0.3px;
-    }
-    .menu-hand {
-      font-family: var(--font-hand); font-size: 10px;
-      color: var(--pp-burnt); margin-top: 2px;
-    }
-    .menu-section-title {
-      font-family: var(--font-hand); font-size: 11px;
-      color: var(--pp-olive); margin-bottom: 6px;
-    }
-    .menu-lines { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
-    .menu-line {
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .ml-name { height: 3px; border-radius: 2px; background: rgba(44,36,24,0.12); }
-    .ml-price { height: 3px; width: 16px; border-radius: 2px; background: rgba(44,36,24,0.08); }
-    .menu-footer {
-      margin-top: auto;
-      border-top: 1px solid rgba(92,107,58,0.15);
-      padding-top: 8px; text-align: center;
-    }
-    .menu-footer-text {
-      font-family: var(--font-hand); font-size: 8px;
-      color: rgba(44,36,24,0.3);
-    }
-
-    /* Wine label mockup */
-    .mockup-label-wrap {
-      display: flex; flex-direction: column; align-items: center; gap: 20px;
-    }
-    .mockup-bottle-label {
-      width: 120px; height: 160px;
-      background: var(--pp-cream);
-      border-radius: 4px;
-      box-shadow: 4px 6px 24px rgba(0,0,0,0.4);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      padding: 16px; gap: 8px;
-      position: relative; overflow: hidden;
-    }
-    .bottle-tile-bg {
-      position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 10px 10px, rgba(92,107,58,0.06) 1px, transparent 1px),
-        radial-gradient(circle at 0 0, rgba(92,107,58,0.06) 1px, transparent 1px);
-      background-size: 20px 20px;
-    }
-    .bottle-mark { position: relative; z-index: 1; }
-    .bottle-brand {
-      font-family: var(--font-brand); font-weight: 700;
-      font-size: 12px; color: var(--pp-espresso); text-align: center;
-      position: relative; z-index: 1;
-    }
-    .bottle-hand {
-      font-family: var(--font-hand); font-size: 10px;
-      color: var(--pp-burnt); text-align: center;
-      position: relative; z-index: 1;
-    }
-    .bottle-rule {
-      width: 24px; height: 1px; background: var(--pp-olive);
-      opacity: 0.3; position: relative; z-index: 1;
-    }
-    .bottle-year {
-      font-family: var(--font-body); font-size: 7px;
-      letter-spacing: 3px; color: rgba(44,36,24,0.3);
-      text-transform: uppercase; position: relative; z-index: 1;
-    }
-
-    /* Business Card mockup */
-    .mockup-cards {
-      position: relative; width: 180px; height: 110px;
-    }
-    .biz-card {
-      position: absolute; width: 164px; height: 98px;
-      border-radius: 6px; padding: 16px 18px;
-    }
-    .biz-card-back {
-      background: var(--pp-cream);
-      top: 10px; right: 0;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-    }
-    .biz-card-back-mark { opacity: 0.1; }
-    .biz-card-back-info {
-      font-size: 7px; line-height: 1.9; color: rgba(44,36,24,0.4);
-      letter-spacing: 0.3px;
-    }
-    .biz-card-front {
-      background: var(--pp-espresso);
-      top: 0; left: 0;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 6px 8px 32px rgba(0,0,0,0.5);
-      position: relative; overflow: hidden;
-    }
-    .biz-card-front::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 8px 8px, rgba(198,168,88,0.04) 1px, transparent 1px),
-        radial-gradient(circle at 0 0, rgba(198,168,88,0.04) 1px, transparent 1px);
-      background-size: 16px 16px;
-    }
-    .biz-card-logo {
-      font-family: var(--font-brand); font-weight: 700;
-      font-size: 13px; color: var(--pp-cream); letter-spacing: -0.3px;
-      position: relative; z-index: 1;
-    }
-    .biz-card-logo-sub {
-      font-family: var(--font-hand); font-size: 9px;
-      color: var(--pp-gold); opacity: 0.6;
-      position: relative; z-index: 1;
-    }
-    .biz-card-name {
-      font-size: 7px; color: rgba(240,230,214,0.4);
-      letter-spacing: 0.3px; position: relative; z-index: 1;
+    .mockup-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.88) contrast(1.05);
     }
 
     /* ===== SOCIAL POSTS ===== */
@@ -904,77 +796,24 @@
 
       <!-- Menu -->
       <div class="mockup-wrap">
-        <div class="mockup-menu">
-          <div class="menu-header">
-            <div class="menu-logo">Porto & Pimenta</div>
-            <div class="menu-hand">seasonal menu</div>
-          </div>
-          <div class="menu-section-title">Starters</div>
-          <div class="menu-lines">
-            <div class="menu-line"><div class="ml-name" style="width:70%"></div><div class="ml-price"></div></div>
-            <div class="menu-line"><div class="ml-name" style="width:55%"></div><div class="ml-price"></div></div>
-            <div class="menu-line"><div class="ml-name" style="width:65%"></div><div class="ml-price"></div></div>
-          </div>
-          <div class="menu-section-title">Mains</div>
-          <div class="menu-lines">
-            <div class="menu-line"><div class="ml-name" style="width:60%"></div><div class="ml-price"></div></div>
-            <div class="menu-line"><div class="ml-name" style="width:75%"></div><div class="ml-price"></div></div>
-            <div class="menu-line"><div class="ml-name" style="width:50%"></div><div class="ml-price"></div></div>
-          </div>
-          <div class="menu-footer">
-            <div class="menu-footer-text">Bandra · Mumbai</div>
-          </div>
+        <div class="mockup-photo">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Seasonal restaurant menu mockup for Porto and Pimenta" loading="lazy">
         </div>
         <div class="mockup-label">Seasonal Menu</div>
       </div>
 
       <!-- Wine Label -->
-      <div class="mockup-label-wrap">
-        <div class="mockup-bottle-label">
-          <div class="bottle-tile-bg"></div>
-          <div class="bottle-mark">
-            <svg width="28" height="28" viewBox="0 0 80 80" fill="none">
-              <circle cx="40" cy="40" r="24" stroke="#5C6B3A" stroke-width="1"/>
-              <path d="M40,20 C42,28 42,34 40,40 C38,34 38,28 40,20Z" fill="#5C6B3A" opacity="0.8"/>
-              <path d="M60,40 C52,42 46,42 40,40 C46,38 52,38 60,40Z" fill="#5C6B3A" opacity="0.8"/>
-              <path d="M40,60 C38,52 38,46 40,40 C42,46 42,52 40,60Z" fill="#5C6B3A" opacity="0.8"/>
-              <path d="M20,40 C28,38 34,38 40,40 C34,42 28,42 20,40Z" fill="#5C6B3A" opacity="0.8"/>
-            </svg>
-          </div>
-          <div class="bottle-brand">Porto & Pimenta</div>
-          <div class="bottle-hand">house selection</div>
-          <div class="bottle-rule"></div>
-          <div class="bottle-year">Bandra · MMXXV</div>
+      <div class="mockup-wrap">
+        <div class="mockup-photo">
+          <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80" alt="Wine bottle and label presentation for Porto and Pimenta" loading="lazy">
         </div>
         <div class="mockup-label">House Wine Label</div>
       </div>
 
       <!-- Business Cards -->
       <div class="mockup-wrap">
-        <div class="mockup-cards">
-          <div class="biz-card biz-card-back">
-            <div class="biz-card-back-mark">
-              <svg width="28" height="28" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="40" r="24" stroke="#2C2418" stroke-width="1" opacity="0.15"/>
-                <path d="M40,20 C42,28 42,34 40,40 C38,34 38,28 40,20Z" fill="#2C2418" opacity="0.12"/>
-                <path d="M60,40 C52,42 46,42 40,40 C46,38 52,38 60,40Z" fill="#2C2418" opacity="0.12"/>
-                <path d="M40,60 C38,52 38,46 40,40 C42,46 42,52 40,60Z" fill="#2C2418" opacity="0.12"/>
-                <path d="M20,40 C28,38 34,38 40,40 C34,42 28,42 20,40Z" fill="#2C2418" opacity="0.12"/>
-              </svg>
-            </div>
-            <div class="biz-card-back-info">
-              hello@portoepimenta.in<br>
-              portoepimenta.in<br>
-              Bandra West, Mumbai
-            </div>
-          </div>
-          <div class="biz-card biz-card-front">
-            <div>
-              <div class="biz-card-logo">Porto & Pimenta</div>
-              <div class="biz-card-logo-sub">Brasserie</div>
-            </div>
-            <div class="biz-card-name">Chef de Cuisine · Marco Fernandes</div>
-          </div>
+        <div class="mockup-photo">
+          <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=900&q=80" alt="Business card branding mockup for Porto and Pimenta" loading="lazy">
         </div>
         <div class="mockup-label">Business Cards</div>
       </div>
